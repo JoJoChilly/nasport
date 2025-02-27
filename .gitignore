@@ -31,3 +31,6 @@ venv/
 ENV/
 .idea/
 .vscode/ 
+
+# 视频文件列表
+video_files.txt
