@@ -1,0 +1,151 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo-animation {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.animated-logo {
+  width: 120px;
+  height: 120px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.logo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(rgba(255, 107, 129, 0.4), transparent 70%);
+  animation: glow 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(0.95); }
+}
+
+@keyframes glow {
+  0% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.5; }
+}
+
+.loading-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.loading-text h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.loading-text h2 {
+  font-size: 16px;
+  color: #888888;
+  font-weight: normal;
+}
+
+.progress-section {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.progress-item {
+  margin-bottom: 20px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #333333;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #ff6b81;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.loading-hints {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.loading-hints p {
+  font-size: 14px;
+  color: #888888;
+  margin: 4px 0;
+}
+
+.loading-animation {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ff6b81;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.dot:nth-child(1) { animation: blink 1.4s infinite 0.0s; }
+.dot:nth-child(2) { animation: blink 1.4s infinite 0.2s; }
+.dot:nth-child(3) { animation: blink 1.4s infinite 0.4s; }
+.dot:nth-child(4) { animation: blink 1.4s infinite 0.6s; }
+.dot:nth-child(5) { animation: blink 1.4s infinite 0.8s; }
+
+@keyframes blink {
+  0% { opacity: 0.3; }
+  20% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+.cancel-button {
+  background: none;
+  border: 1px solid #444444;
+  color: #888888;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+} 
